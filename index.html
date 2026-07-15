@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
+        /* ===== all existing styles remain unchanged ===== */
         :root {
             --primary-blue: #2c5aa0;
             --secondary-blue: #4a7bc1;
@@ -503,6 +504,7 @@
             letter-spacing: 0.02em;
         }
 
+        /* "up next" badge on the first pill */
         .welcome-cta-pill.next-event {
             border: 2px solid var(--primary-blue);
             background: linear-gradient(145deg, #f4faff, var(--white));
@@ -523,6 +525,17 @@
             text-transform: uppercase;
             box-shadow: 0 4px 12px rgba(44, 90, 160, 0.2);
             white-space: nowrap;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* badge variations for "Today" vs "Up Next" */
+        .welcome-cta-pill .up-next-badge.today-badge {
+            background: #e67e22;
+            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.35);
+        }
+        .welcome-cta-pill .up-next-badge.day-name-badge {
+            background: var(--primary-blue);
         }
 
         .baile-badge {
@@ -542,6 +555,7 @@
             line-height: 1.6;
         }
 
+        /* rest of original styles */
         .payment-modal-overlay {
             position: fixed;
             top: 0;
@@ -3903,6 +3917,19 @@
                 padding: var(--space-1) var(--space-3);
             }
         }
+
+        /* additional pill badge dynamic styles */
+        .welcome-cta-pill .up-next-badge.today-badge {
+            background: #e67e22;
+            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.35);
+        }
+        .welcome-cta-pill .up-next-badge.day-name-badge {
+            background: var(--primary-blue);
+        }
+        .welcome-cta-pill .up-next-badge.up-next-badge {
+            background: var(--primary-blue);
+            box-shadow: 0 4px 12px rgba(44, 90, 160, 0.2);
+        }
     </style>
 </head>
 <body class="welcome-active no-scroll">
@@ -3959,6 +3986,7 @@
             <div class="community-moved-section section-animate">
                 <div class="subtle-pills-label">Classes &amp; Social Dancing</div>
                 <div class="welcome-pills" id="welcome-pills-container">
+                    <!-- Pills ordered dynamically; links updated per user request -->
                     <a href="https://facebook.com/events/s/noche-de-baile-ft-djmx/1717085946277013/" class="welcome-cta-pill" data-app="facebook" data-event-key="oldcity">
                         <span class="pill-main">Old City Philly Thu • 9:45pm Lesson • 10:30pm Social</span>
                         <span class="pill-styles">Bachata • Cumbia • Salsa</span>
@@ -4068,7 +4096,7 @@
                             </div>
                         </div>
                         <div class="special-note"><i class="fas fa-dj"></i> Special DJ every Thursday</div>
-                        <a href="https://facebook.com/events/s/noche-de-baile-ft-djmx/1717085946277013/" class="card-cta" data-app="facebook">Event Info <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://www.facebook.com/share/1BHmvRTEiZ/?mibextid=wwXIfr" class="card-cta" data-app="facebook">Event Info <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -4173,7 +4201,7 @@
             <h2 class="section-title" style="margin-bottom: var(--space-6);">Our Next Social Event</h2>
             <div class="announcement-carousel section-animate" id="events-carousel">
                 <div class="carousel-slides" id="carousel-slides">
-                    <div class="carousel-slide"><div class="modern-event-card"><h3 class="event-title">117 Old City Philly – Noche de Bachata Cumbia Thursdays</h3><div class="event-datetime"><i class="far fa-calendar-alt"></i> Every Thursday: 9:45pm Class · 10:30pm Social until 1am</div><div class="event-venue"><a href="https://www.google.com/maps/search/?api=1&query=117+Chestnut+Street+Philadelphia" target="_blank" class="address-link"><i class="fas fa-location-dot"></i> 117 Chestnut Street, Philadelphia</a></div><a href="https://facebook.com/events/s/noche-de-baile-ft-djmx/1717085946277013/" class="event-cta-primary" data-app="facebook">JOIN EVENT</a><div class="event-footer-minimal"><a href="https://facebook.com/events/s/noche-de-baile-ft-djmx/1717085946277013/" class="add-calendar" data-app="facebook"><i class="far fa-calendar-plus"></i> Add to Calendar</a><span><i class="fas fa-user-friends"></i> No partner needed</span></div></div></div>
+                    <div class="carousel-slide"><div class="modern-event-card"><h3 class="event-title">117 Old City Philly – Noche de Bachata Cumbia Thursdays</h3><div class="event-datetime"><i class="far fa-calendar-alt"></i> Every Thursday: 9:45pm Class · 10:30pm Social until 1am</div><div class="event-venue"><a href="https://www.google.com/maps/search/?api=1&query=117+Chestnut+Street+Philadelphia" target="_blank" class="address-link"><i class="fas fa-location-dot"></i> 117 Chestnut Street, Philadelphia</a></div><a href="https://www.facebook.com/share/1BHmvRTEiZ/?mibextid=wwXIfr" class="event-cta-primary" data-app="facebook">JOIN EVENT</a><div class="event-footer-minimal"><a href="https://www.facebook.com/share/1BHmvRTEiZ/?mibextid=wwXIfr" class="add-calendar" data-app="facebook"><i class="far fa-calendar-plus"></i> Add to Calendar</a><span><i class="fas fa-user-friends"></i> No partner needed</span></div></div></div>
                     <div class="carousel-slide"><div class="modern-event-card"><h3 class="event-title">Buena Vista Restaurant – Salsa &amp; Bachata 2nd &amp; 4th Saturday</h3><div class="event-datetime"><i class="far fa-calendar-alt"></i> 9:45pm Class · 10:30pm Social until 1am</div><div class="event-venue"><a href="https://maps.app.goo.gl/kRUnNDkQM7vBHhB89?g_st=ic" target="_blank" class="address-link"><i class="fas fa-location-dot"></i> Ardmore, PA</a></div><a href="https://www.facebook.com/share/1CDHw34hsK/" class="event-cta-primary" data-app="facebook">JOIN EVENT</a><div class="event-footer-minimal"><a href="https://www.facebook.com/share/1CDHw34hsK/" class="add-calendar" data-app="facebook"><i class="far fa-calendar-plus"></i> Add to Calendar</a><span><i class="fas fa-user-friends"></i> No partner needed</span></div></div></div>
                 </div>
                 <button class="carousel-btn carousel-prev" id="carousel-prev"><i class="fas fa-chevron-left"></i></button>
@@ -4245,6 +4273,7 @@
     </div>
 
     <script>
+        // ─── FIX: Facebook in-app browser link handling ───
         function isFacebookInAppBrowser() {
             var ua = navigator.userAgent || navigator.vendor || window.opera;
             return /FBAN|FBAV|FBIOS|FB_IAB/i.test(ua);
@@ -4348,6 +4377,7 @@
         var observer = new MutationObserver(function() { setupDeepLinks(); });
         observer.observe(document.body, { childList: true, subtree: true });
 
+        // ─── main script ───
         document.addEventListener('DOMContentLoaded', function() {
             let paymentModalOpen = false;
             window.paymentModalOpen = false;
@@ -4528,7 +4558,10 @@
 
             restartAutoDismiss();
 
+            // ─── EVENT PILL ROTATION BY DATE ───
             function getNextOccurrence(dayName, weekPattern) {
+                // dayName: 'Thu', 'Wed', 'Fri', 'Sat'
+                // weekPattern: 'every', '1st&3rd', '2nd&4th'
                 const now = new Date();
                 const dayMap = { 'Sun': 0, 'Mon': 1, 'Tue': 2, 'Wed': 3, 'Thu': 4, 'Fri': 5, 'Sat': 6 };
                 const targetDay = dayMap[dayName];
@@ -4537,24 +4570,29 @@
                 let candidate = new Date(now);
                 candidate.setHours(0, 0, 0, 0);
 
+                // Move to the next occurrence of the target day
                 const currentDay = candidate.getDay();
                 let daysToAdd = targetDay - currentDay;
                 if (daysToAdd <= 0) daysToAdd += 7;
                 candidate.setDate(candidate.getDate() + daysToAdd);
 
+                // If 'every', just return this date, but respect 11pm cutoff
                 if (weekPattern === 'every') {
                     const nowH = now.getHours() * 100 + now.getMinutes();
-                    if (daysToAdd === 0 && nowH >= 2200) {
+                    // 11pm = 2300
+                    if (daysToAdd === 0 && nowH >= 2300) {
                         candidate.setDate(candidate.getDate() + 7);
                     }
                     return candidate;
                 }
 
+                // For week patterns: find the next occurrence that matches the pattern
                 const getWeekOfMonth = (date) => {
                     const firstDay = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
                     return Math.ceil((date.getDate() + firstDay) / 7);
                 };
 
+                // Check up to 4 weeks out
                 for (let i = 0; i < 4; i++) {
                     const checkDate = new Date(candidate);
                     checkDate.setDate(candidate.getDate() + i * 7);
@@ -4575,17 +4613,21 @@
                         matches = (week === 4);
                     }
                     if (matches) {
+                        // If it's today but we've passed 11pm, go to next occurrence
                         const nowH = now.getHours() * 100 + now.getMinutes();
-                        if (i === 0 && daysToAdd === 0 && nowH >= 2100) {
+                        if (i === 0 && daysToAdd === 0 && nowH >= 2300) {
                             continue;
                         }
                         return checkDate;
                     }
                 }
+
+                // Fallback: return the base candidate
                 return candidate;
             }
 
             function parseEventKey(key) {
+                // Returns { dayName, weekPattern, label }
                 const map = {
                     'oldcity': { day: 'Thu', pattern: 'every', label: 'Old City Philly' },
                     'ardmore': { day: 'Sat', pattern: '2nd&4th', label: 'Ardmore Salsa Nights' },
@@ -4595,15 +4637,28 @@
                 return map[key] || null;
             }
 
+            function getBadgeTextForPill(daysUntil) {
+                // daysUntil: 0 = today, 1 = tomorrow, 2+ = future
+                if (daysUntil === 0) return 'Today';
+                if (daysUntil === 1) return 'Tomorrow';
+                const now = new Date();
+                const target = new Date();
+                target.setDate(now.getDate() + daysUntil);
+                // Return short day name (Wed, Thu, Fri, Sat)
+                return target.toLocaleDateString('en-US', { weekday: 'short' });
+            }
+
             function sortEventPills() {
                 const container = document.getElementById('welcome-pills-container');
                 if (!container) return;
                 const pills = Array.from(container.querySelectorAll('.welcome-cta-pill'));
                 if (pills.length === 0) return;
 
+                // Remove existing "up-next" badges
                 document.querySelectorAll('.up-next-badge').forEach(el => el.remove());
                 pills.forEach(p => p.classList.remove('next-event'));
 
+                // Build array with next occurrence dates
                 const withDates = pills.map(pill => {
                     const key = pill.getAttribute('data-event-key');
                     if (!key) return { pill, date: null, key };
@@ -4613,30 +4668,67 @@
                     return { pill, date, key, info };
                 });
 
+                // Filter out null dates and sort
                 const valid = withDates.filter(item => item.date !== null);
                 valid.sort((a, b) => a.date.getTime() - b.date.getTime());
 
+                // Reorder pills in DOM
                 const orderedPills = valid.map(item => item.pill);
+                // Append any pills that didn't have a date (fallback at the end)
                 const unprocessed = withDates.filter(item => item.date === null).map(item => item.pill);
                 orderedPills.push(...unprocessed);
 
+                // Remove all pills from container and re-append in order
                 while (container.firstChild) container.removeChild(container.firstChild);
                 orderedPills.forEach(p => container.appendChild(p));
 
+                // Add badge to the first pill with dynamic text
                 if (orderedPills.length > 0) {
                     const first = orderedPills[0];
                     first.classList.add('next-event');
+
+                    // Calculate days until this event
+                    const key = first.getAttribute('data-event-key');
+                    let daysUntil = 7; // fallback
+                    if (key) {
+                        const info = parseEventKey(key);
+                        if (info) {
+                            const date = getNextOccurrence(info.day, info.pattern);
+                            if (date) {
+                                const now = new Date();
+                                now.setHours(0, 0, 0, 0);
+                                const diffTime = date.getTime() - now.getTime();
+                                daysUntil = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                                if (daysUntil < 0) daysUntil = 0;
+                            }
+                        }
+                    }
+
                     const badge = document.createElement('span');
                     badge.className = 'up-next-badge';
-                    badge.textContent = '⬆ Up Next';
+
+                    const badgeText = getBadgeTextForPill(daysUntil);
+                    badge.textContent = badgeText;
+
+                    // Add a class for styling based on badge type
+                    if (badgeText === 'Today') {
+                        badge.classList.add('today-badge');
+                    } else if (badgeText === 'Tomorrow' || badgeText === 'Up Next') {
+                        badge.classList.add('up-next-badge');
+                    } else {
+                        badge.classList.add('day-name-badge');
+                    }
+
                     first.appendChild(badge);
                 }
             }
 
+            // ─── the rest of the main page initialization ───
             function initMainPage() {
                 if (mainInitialized) return;
                 mainInitialized = true;
 
+                // Sort event pills by date
                 sortEventPills();
 
                 const navBar = document.getElementById('nav-buttons');
@@ -5438,6 +5530,7 @@
                     sortEventPills();
                 }, 60000);
 
+                // Also re-sort event pills whenever the day changes (every hour)
                 setInterval(() => {
                     sortEventPills();
                 }, 3600000);
